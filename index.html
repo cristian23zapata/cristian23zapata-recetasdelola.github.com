@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Las Recetas De Lola</title>
+    <link href="./assets/css/bootstrap.min.css" rel="stylesheet">
+</head>
+
+<body>
+    <div class="container">
+        <h1 class="text-center">Las Recetas De Lola</h1>
+
+        <div class="text-end mb-3">
+            <nav class="navbar navbar-dark bg-dark">
+                <button class="btn btn-outline-primary p-2 m-2" onclick="nuevaReceta()">Añadir Receta</button>
+            </nav>
+            
+        </div>
+
+        
+        <div class="card mb-3" style="max-width: 1540px;">
+            <div class="row g-0">
+                <div class="col-md-4">
+                    <img src="./assets/images/receta1.jpeg" class="img-fluid rounded-start" alt="Imagen de la receta">
+                </div>
+                <div class="col-md-8">
+                    <div class="card-body">
+                        <h5 class="card-title">Tacos // Numero Consecutivo : 1</h5>
+                        <p class="card-text">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Molestiae iure perspiciatis, repellat blanditiis, impedit magni quod ut sequi esse iste quam cupiditate deleniti aliquid quidem voluptatibus delectus nesciunt. Itaque, ad?</p>
+                        <p class="card-text"><small class="text-body-secondary">Costo : $15000</small></p>
+                        <p class="card-text"><small class="text-body-secondary">Precio Sugerido : $30000</small></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <div id="container">
+            
+        </div>
+
+        <div class="modal fade" id="miModal" tabindex="-1" aria-labelledby="miModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="miModalLabel">Añadir Nueva Receta</h5>
+                        <button type="button" class="btn-close" onclick="cancelar()" aria-label="Cerrar"></button>
+                    </div>
+                    <div class="modal-body">
+                        <form id="formReceta">
+                            <div class="mb-3">
+                                <label for="numero" class="form-label">Número Consecutivo</label>
+                                <input type="number" class="form-control" id="numero" required>
+                            </div>
+                            <div class="mb-3">
+                                <label for="nombreReceta" class="form-label">Nombre de la Receta</label>
+                                <input type="text" class="form-control" id="nombreReceta" required>
+                            </div>
+                            <div class="mb-3">
+                                <label for="descripcion" class="form-label">Descripción</label>
+                                <textarea class="form-control" id="descripcion" rows="3" required></textarea>
+                            </div>
+                            <div class="mb-3">
+                                <label for="costo" class="form-label">Costo</label>
+                                <input type="number" class="form-control" id="costo" required>
+                            </div>
+                            <div class="mb-3">
+                                <label for="precioSugerido" class="form-label">Precio Sugerido</label>
+                                <input type="number" class="form-control" id="precioSugerido" required>
+                            </div>
+                            <div>
+                                <label for="formFileLg" class="form-label">Insertar Imagen</label>
+                                <input class="form-control form-control-lg" id="subirImagen" type="file">
+                            </div>
+                        </form>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" onclick="cancelar()">Cancelar</button>
+                        <button type="button" class="btn btn-primary" onclick="guardar()">Guardar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="./assets/js/bootstrap.bundle.min.js"></script>
+    <script src="./assets/js/1.js"></script>
+</body>
+
+</html>
